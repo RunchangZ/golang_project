@@ -1,7 +1,32 @@
 # Receipt Processor API
-Test the working API with Postman
+
+
+
+## How to run it:
+You can run `make help` to see the instructions 
+
+ 1. `make build` - build the image
+ 2. `make run` - run docker with default json file: M&M.json
+ 3. `make run file=[filename]` - destroy docker-cleanup container
+ 4. `make cleanall` - FORCELY remove all containers
+ 
+ Here are some JSON files in the `\example` folder 
+ 
+  List of JSON files other than the default M&M.json:
+  
+	morning_receipt.json
+  
+	single_receipt.json
+  
+	Target_receipt.json
+
+ 
+
+If you want to run with single_receipt.json file: 
+`make run file=single_receipt.json`
 
 ## Test URL: `http://localhost:8000`
+Test the working API with Postman
 
 ## Endpoints
 
@@ -39,6 +64,3 @@ Retrieve the number of points awarded for a specific receipt.
 2. 404 PageNote Found: please check the endpoints and port. Id might be invaild. 
 3. 400 Bad Request: possible happend on `http://localhost:8000/receipts/process`--invaild receipt
 
-## How to run it:
-Please run and checkout the following command line:
-`make help`
